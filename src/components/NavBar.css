@@ -1,0 +1,177 @@
+.navbar {
+width: 100vw;
+height: 58px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: #ffffff;
+padding: 0 20px; /* Horizontal padding */
+box-shadow: 0px 7px 7px 0px rgba(109, 109, 109, 0.04);
+position: fixed;
+top: 0;
+z-index: 1000;
+}
+
+/* Wrapper for logo and search container */
+.logo-search-wrapper {
+width: 268px;
+height: 40px;
+display: flex;
+align-items: center;
+gap: 12px;
+position: absolute;
+top: 9px;
+left: 160px;
+}
+
+/* Logo container */
+.logo-container {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.logo {
+width: 40px;
+height: 40px;
+border-radius: 4px;
+object-fit: cover;
+}
+
+/* Search container */
+.search-container {
+display: flex;
+align-items: center;
+gap: 4px;
+background-color: #f4f5f5;
+border-radius: 32px;
+width: 216px;
+height: 40px;
+padding: 11px 12px;
+box-sizing: border-box;
+}
+
+/* Search icon */
+.search-icon {
+width: 16px;
+height: 16px;
+color: #949796;
+font-size: 16px;
+}
+
+/* Search input */
+.search-box {
+font-family: 'DM Sans', sans-serif;
+font-weight: 400;
+font-size: 14px;
+line-height: 18.23px;
+border: none;
+outline: none;
+background: transparent;
+flex-grow: 1;
+color: #949796;
+font-size: 14px;
+line-height: 18px;
+width: 44px;
+height: 18px;
+}
+
+.buttons-account-wrapper {
+position: absolute;
+top: 9px;
+right: 160px;
+display: flex;
+align-items: center;
+gap: 32px;
+}
+
+/* Individual button styling */
+.nav-button {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+width: auto;
+height: 24px;
+background: none;
+border: none;
+cursor: pointer;
+font-size: 14px;
+color: #333;
+position: relative;
+transition: color 0.3s ease-in-out;
+}
+
+.nav-button.active {
+color: #2db8a1;
+}
+
+.nav-button:hover {
+color: #2db8a1;
+}
+
+/* Underline */
+.nav-button::after {
+content: '';
+position: absolute;
+bottom: -14px;
+left: 50%;
+transform: translateX(-50%);
+width: 90px;
+height: 0;
+border-top: 2px solid #2DB8A1;
+opacity: 0;
+transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.nav-button.active::after,
+.nav-button:hover::after {
+opacity: 1;
+}
+
+/* Target the SVG icons within the button on hover */
+.nav-button:hover .button-icon path {
+stroke: #2DB8A1; /* Change the stroke color of the icon */
+}
+
+.buttons-account-wrapper {
+display: flex;
+align-items: center;
+gap: 32px;
+}
+
+.button-icon {
+width: 18px;
+height: 18px;
+flex-shrink: 0;
+vertical-align: middle;
+}
+
+.button-text {
+font-size: 14px;
+line-height: 18px;
+}
+
+/* Account icon styling */
+.account-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+}
+
+.account-logo {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 50%;
+}
+
+/* Ensure spacing from logo to Notifications button */
+.logo-search-wrapper {
+display: flex;
+align-items: center;
+gap: 16px;
+}
